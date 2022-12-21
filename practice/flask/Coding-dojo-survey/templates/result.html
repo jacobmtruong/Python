@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submitted Info</title>
+    <style>
+        div{
+            margin: auto;
+            border: 2px solid rgb(255,193,7) ;
+            border-radius: 10px;
+        }
+        li{
+            font-size: 23px;
+            list-style-type: none;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div style="background-color:rgba(54, 71, 80, 0.643); padding: 20px; 
+    width: 500px;">
+        <h1 style="color:rgb(255,193,7) ;">Submitted Info</h1>
+        <ul>
+            <li style="font-size: 30px; color: rgb(82, 232, 89);">{{request.form["name"]}}</li>
+            <li>Location: {{request.form["location"]}}</li>
+            <li>Favorite Language: {{request.form["language"]}}</li>
+            <li>Comments: {{request.form["comments"]}}</li>
+        </ul>
+    </div>
+</body>
+</html>
