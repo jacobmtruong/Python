@@ -1,0 +1,51 @@
+1.Create 3 new dojos
+
+insert into dojos(name,created_at,updated_at)
+values ("Kim",now(),now()),
+    ("Kourtney",now(),now()),
+    ("Kendall",now(),now())
+
+2. Delete the 3 dojos you just created
+
+delete from dojos where id=1
+delete from dojos where id=2
+delete from dojos where id=3
+
+3. Create 3 more dojos
+
+insert into dojos(name,created_at,updated_at)
+values ("San Jose",now(),now()),
+    ("San Francisco",now(),now()),
+    ("Burbank",now(),now())
+
+
+4. Create 3 ninjas that belong to the first dojo
+
+insert into ninjas(first_name,last_name,age,created_at,updated_at,dojos_id)
+values ("Kim","Kardashian",40,now(),now(),7),
+    ("Kourtney","Kardashian",43,now(),now(),7),
+    ("Kendall","Kardashian",26,now(),now(),7)
+
+5.Create 3 ninjas that belong to the second dojo
+
+insert into ninjas(first_name,last_name,age,created_at,updated_at,dojos_id)
+values ("Kris","Jenner",65,now(),now(),8),
+    ("Kylie","Jenner",24,now(),now(),8),
+    ("Khloe","Kardashian",39,now(),now(),8)
+
+6.Create 3 ninjas that belong to the third dojo
+
+insert into ninjas(first_name,last_name,age,created_at,updated_at,dojos_id)
+values ("Brody","Jenner",65,now(),now(),9),
+    ("Brandon","Jenner",24,now(),now(),9),
+    ("Rob","Kardashian",39,now(),now(),9)
+
+7. Retrieve all the ninjas from the first dojo
+
+select * from ninjas
+where dojos_id = 7
+
+8.Retrieve all the ninjas from the last dojo
+
+select * from ninjas
+where dojos_id = 9

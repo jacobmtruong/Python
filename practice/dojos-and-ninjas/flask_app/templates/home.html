@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application for New Ninja</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <form class="w-25 mx-auto" style="margin-top: 100px; gap: 20px; background-color:rgb(139, 248, 206); padding: 30px; border: 2px solid rgb(255,194,11); border-radius: 10%;" action="/submit" method="post">
+        <a href="/dojos">Home</a>
+        <h1 class="my-3" style="color:rgb(255,194,11);"><b>New Ninja</b></h1>
+        <select class="form-select my-3" aria-label="Default select example" name="dojos_id">
+            <option hidden="hidden">Choose a location</option>
+            {% for dojo in all_dojos %}
+            <option value="{{dojo.id}}">{{dojo.name}}</option>
+            {% endfor %}
+        </select>
+        <div class="input-group">
+            <span class="input-group-text my-3" for="first_name">First Name</span>
+            <input type="text" class="form-control my-3" aria-label="Username" aria-describedby="addon-wrapping" name="first_name">
+        </div>
+        <div class="input-group">
+            <span class="input-group-text my-3" id="last_name">Last Name</span>
+            <input type="text" class="form-control my-3" aria-label="Username" aria-describedby="addon-wrapping" name="last_name">
+        </div>
+        <div class="input-group">
+            <span class="input-group-text my-3" for="age">Age</span>
+            <input type="text" class="form-control my-3" aria-label="Username" aria-describedby="addon-wrapping" name="age">
+        </div>
+        <button type="submit" value="submit" class="btn btn-success">Add Ninja</button>
+    </form>
+</body>
+
+</html>

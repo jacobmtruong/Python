@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+    <div style="width: 70%; margin: auto; margin-top: 100px;">
+        <h1 style="color:rgb(255,194,11); margin-bottom: 50px;">{{dojo.name}} Dojo</h1>
+        <table class="table" style="border: 2px solid rgb(255,194,11);">
+            <thead>
+                <tr class="table-success">
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">Age</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for ninja in dojo.ninjas %}
+                <tr>
+                    <td class="table-success">{{ninja.first_name}}</td>
+                    <td class="table-success">{{ninja.last_name}}</td>
+                    <td class="table-success">{{ninja.age}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a class="btn btn-primary my-3" href="/dojos">Home</a>
+    </div>
+</body>
+</html>
